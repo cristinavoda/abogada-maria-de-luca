@@ -129,5 +129,24 @@ export default {
   }
   .nav-links.open { transform: translateX(0); }
   .burger { display: flex; }
+   .card-ubication {
+    width: 90%;
+    margin: 0 auto; /* 🔥 centra la card */
+    padding: 15px;
+    text-align: center;
+  }
+
+  .map-container {
+    width: 100%;
+    overflow: hidden; /* evita que se salga */
+    border-radius: 12px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 250px; /* más compacto en móvil */
+    border-radius: 12px;
+  }
 }
+
 </style>
