@@ -30,13 +30,13 @@
   transition: all 0.3s ease;
 }
 
-/* icon */
+
 .phone-btn svg {
   width: 24px;
   height: 24px;
 }
 
-/* hover premium */
+
 .phone-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 30px rgba(184,115,51,0.5);

@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
+
 
 export default {
   data() {
@@ -65,30 +65,13 @@ export default {
 
   methods: {
     openModal() {
+     
       this.visible = true;
-      this.$nextTick(() => {
-        gsap.fromTo(
-          this.$refs.modal,
-          { opacity: 0, y: 40, scale: 0.9 },
-          { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "power3.out" }
-        );
-        gsap.fromTo(
-          this.$refs.overlay,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.3 }
-        );
-      });
     },
 
     closeModal() {
-      gsap.to(this.$refs.modal, {
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.25,
-        onComplete: () => {
-          this.visible = false;
-        }
-      });
+     
+      this.visible = false;
     },
 
     saveSettings() {

@@ -32,13 +32,13 @@
   transition: all 0.3s ease;
 }
 
-/* icon */
+
 .whatsapp-btn svg {
   width: 26px;
   height: 26px;
 }
 
-/* hover */
+
 .whatsapp-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 12px 30px rgba(37,211,102,0.5);
