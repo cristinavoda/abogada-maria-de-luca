@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .header {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 0 0px 0px;
 }
 
 .logo h1 {

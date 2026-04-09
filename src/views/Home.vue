@@ -235,8 +235,8 @@ h1, h2, h3 {
   text-align: center;
   padding: 120px 20px;
   z-index: 1;
-  backdrop-filter: blur(5px); 
-  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(15px); 
+  background: rgba(255, 255, 255, 0.5); 
    justify-content: center;
   align-items: center;
   
@@ -254,6 +254,7 @@ h1, h2, h3 {
   margin-top: 20px;
   font-size: 1.2rem;
   color: #705509;
+  font-weight: 600;
 }
 .servicios h2 {
   font-size: 1.5rem;
@@ -299,7 +300,7 @@ h1, h2, h3 {
 .card {
    z-index: 1;
   backdrop-filter: blur(5px); 
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.5); 
   padding: 20px;
   border-radius: 8px;
   width: 390px;
@@ -331,7 +332,7 @@ h1, h2, h3 {
   display: block; 
   position: relative;
   background: rgba(255, 255, 255, 0.25);
-   backdrop-filter: blur(12px); 
+   backdrop-filter: blur(17px); 
    padding: 40px 20px;
 }
 
@@ -403,7 +404,9 @@ h1, h2, h3 {
   }
 
   .sobre-content {
-    padding: 0 10px;
+    width: 105%;
+    padding: 0 0 0 10px;
+
   }
 }
 .contact-form {
@@ -413,8 +416,8 @@ h1, h2, h3 {
   position: relative;
   z-index: 1;
 
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  background: rgba(250, 249, 249, 0.25);
 
   padding: 3rem 2rem;
   border-radius: 14px;
@@ -533,6 +536,9 @@ button:hover {
     flex-direction: row;          
     justify-content: space-between;
     padding: 1rem 1rem;
+    margin-top: 40px;
+   position: relative;
+   z-index: 2;
     
   }
 
@@ -543,6 +549,15 @@ button:hover {
 
   footer p {
     font-size: 1rem;
+  }
+}
+@media (min-width: 1025px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.2rem;
+    margin-top: 40px;
+   position: relative;
   }
 }
 @media (max-height: 800px) {
