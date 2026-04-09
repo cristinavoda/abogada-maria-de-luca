@@ -121,6 +121,7 @@ export default {
   margin-bottom: 20px;
   color: #ac733d;
   font-family: Robo slab;
+  z-index: 1;
 }
 
 .servicios-procesal p {
