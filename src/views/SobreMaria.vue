@@ -110,7 +110,7 @@
   font-family: Robo slab;}
 
 .sobre-float-img {
-  float: right;
+  float: left;
   max-width: 400px;
   border-radius: 396px;
   margin-left: 20px;

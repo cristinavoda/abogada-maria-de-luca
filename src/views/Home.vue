@@ -16,6 +16,12 @@
             Asesoramiento legal en derecho civil y mercantil con un enfoque
             personalizado y profesional.
           </p>
+          <p>
+           Mi compromiso es ofrecerte un apoyo integral en la gestión de cualquier conflicto en el ámbito civil y de familia, así como un acompañamiento cercano y especializado en inmobiliario, procedimientos Penales, Violencia de Género, Jurisdicción de Menores, ley de la segunda oportunidad y función pública.
+          </p>
+          <p> El Derecho Civil es la rama que más aspectos de la vida cotidiana abarca. Prácticamente todo el día a día de las personas es derecho civil: relaciones familiares, sucesión, patrimonio de la persona, obligaciones y contratos, responsabilidad contractual y extracontractual. Se dice que es la contraposición al Derecho administrativo, ya que es un derecho puramente privado, en el que la administración no interviene para nada.
+
+</p>
           <router-link to="/contacto" class="btn">Solicitar consulta</router-link>
         </section>
 
@@ -40,8 +46,9 @@
 
  
   <section id="sobre" class="sobre">
-    <h1 class="sobre-title">Sobre María de Luca</h1>
+  
     <div class="sobre-content">
+       <h1 class="sobre-title">Sobre María de Luca</h1>
       <img src="/images/maria.png" alt="María de Luca" class="sobre-float-img" />
       <div class="sobre-text">
       <p>
@@ -130,7 +137,22 @@
     </form>
     <p v-if="enviado" class="success-msg">¡Gracias! Tu mensaje ha sido enviado.</p>
   </section>
-
+<div class="card-ubication" data-aos="fade-up" data-aos-delay="500" position="relative" z-index="1">
+    
+        <h2> Ubicación</h2>
+        <div class="map-container">
+        <iframe
+  width="100%"
+  height="350"
+  style="border:0; border-radius: 12px;"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.037566902099!2d0.7984!3d41.6300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a6a7b692cf2a05%3A0x93bf9f0f7e2e76cc!2sCarrer%20Sant%20Miquel%2C%2012%2C%2025254%20Bell-lloc%20d'Urgell%2C%20Lleida!5e0!3m2!1ses!2ses!4v1731589912345"
+>
+</iframe>
+</div>
+      </div>
   <Footer />
 </template>
 
@@ -209,8 +231,8 @@ h1, h2, h3 {
 
 .bg-layer {
   position: fixed;
-  top: 0; left: 5%; right: 1%; bottom: 0;
-  width: 100%;
+  top: 0; left: 0; right: 10px; bottom: 0;
+  max-width: 100%;
   height: 100%;
   background: url('/images/oficina.png') center/cover no-repeat;
   z-index: 0;
@@ -225,16 +247,24 @@ h1, h2, h3 {
 .content-layer {
   position: relative;
   z-index: 1;
-  width: 90%;
+  width: 100%;
   height: 100%;
   backdrop-filter: blur(5px); 
-  padding: 20px 60px;
+  padding: 20px 20px;
    justify-content: center;
 }
 .hero {
+  position: relative;
+   z-index: 1;
+   background: rgba(255, 255, 255, 0.9); 
+   backdrop-filter: blur(10px); 
+  border-radius: 12px;
+   margin: 1rem 0rem;
+   max-width: 1800px;
   text-align: center;
-  padding: 120px 20px;
+  padding: 20px 20px;
   z-index: 1;
+  margin-top: 60px;
   backdrop-filter: blur(15px); 
   background: rgba(243, 243, 236, 0.9); 
    justify-content: center;
@@ -244,6 +274,7 @@ h1, h2, h3 {
 
 
 .hero h1 {
+   
   font-size: 1.8rem;
   max-width: 700px;
   margin: auto;
@@ -285,7 +316,7 @@ h1, h2, h3 {
 
 
 .servicios {
-  padding: 50px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -300,7 +331,7 @@ h1, h2, h3 {
 .card {
    z-index: 1;
   backdrop-filter: blur(5px); 
-  background: rgba(228, 226, 226, 0.993); 
+  background: rgba(228, 226, 226, 6.993); 
   padding: 20px;
   border-radius: 8px;
   width: 390px;
@@ -313,8 +344,9 @@ h1, h2, h3 {
 }
 .sobre {
   max-width: 1000px;
+    margin: 0 auto;
   margin: 10px auto;
-  padding: 10px 40px;
+  padding: 40px 40px;
   z-index: 1;
 }
 
@@ -356,10 +388,11 @@ h1, h2, h3 {
 .sobre-content h3 {
   font-size: 1.2rem;
   color: #ac733d;
-  font-family: Robo slab;}
+  font-family: Robo slab;
+}
 
 .sobre-float-img {
-  float: right;
+  float: left;
   max-width: 400px;
   border-radius: 396px;
   margin-left: 20px;
@@ -396,23 +429,34 @@ h1, h2, h3 {
 
 
 @media (max-width: 768px) {
+  .sobre {
+    width: 90%;
+    
+    
+  }
+  .sobre-h1 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
   .sobre-float-img {
     float: none;
     display: block;
-    margin: 0 auto 20px;
-    width: 80%;
+    width: 40%;
+    height: 100%;
+     margin-top: 10px;
   }
 
   .sobre-content {
-    width: 105%;
-    padding: 0 0 0 10px;
+    width: 100%;
+    height: auto;
+    padding: 40px 10px 0 10px;
 
   }
 }
 .contact-form {
   max-width: 900px;
-  width: 100%;
-  margin: 6rem; 
+  width: 90%;
+  margin: 1rem; 
   position: relative;
   z-index: 1;
 
@@ -496,6 +540,24 @@ button:hover {
   color: green;
   font-weight: bold;
 }
+.card-ubication {
+  position: relative;
+  z-index: 1;
+  background-color: #faf9f2;
+}
+.card-ubication h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #bd7d06;
+  font-family: 'Robo Slab', serif;
+
+  font-size: 1.7rem;}
+.card-ubication {
+  position: relative;
+  z-index: 1;
+}
+  
 .footer {
   text-align: center;
   padding: 20px;
@@ -578,7 +640,12 @@ button {
   .bg-layer .logo {
     display: none;
   }
-
+.sobre {
+    width: 100%;
+    height: fit-content;
+    padding: 0 0 0 0px;
+    display: inline-block;
+  }
   
   .contact-wrapper {
     flex-direction: column;
@@ -603,9 +670,9 @@ button {
   font-weight: 500;
 }
 .contact-form {
-  max-width: 900px;
+  max-width: 500px;
   align-items: flex-start;
-  margin: -10px 0;
+  margin: 10px 0;
   height: auto;
   position: relative;
   z-index: 1;
@@ -639,7 +706,7 @@ button {
   }
   
 .servicios {
-  padding: 50px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -656,7 +723,7 @@ button {
 .card {
    z-index: 1;
   backdrop-filter: blur(5px); 
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(236, 234, 234, 0.9); 
   padding: 20px;
   border-radius: 8px;
   width: 390px;

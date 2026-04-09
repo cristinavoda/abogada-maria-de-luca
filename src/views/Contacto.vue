@@ -30,7 +30,25 @@
     </form>
     <p v-if="enviado" class="success-msg">¡Gracias! Tu mensaje ha sido enviado.</p>
   </section>
+    
+<div class="card-ubication" data-aos="fade-up" data-aos-delay="500" position="relative" z-index="1">
+    
+        <h2> Ubicación</h2>
+        <div class="map-container">
+        <iframe
+  width="100%"
+  height="350"
+  style="border:0; border-radius: 12px;"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.037566902099!2d0.7984!3d41.6300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a6a7b692cf2a05%3A0x93bf9f0f7e2e76cc!2sCarrer%20Sant%20Miquel%2C%2012%2C%2025254%20Bell-lloc%20d'Urgell%2C%20Lleida!5e0!3m2!1ses!2ses!4v1731589912345"
+>
+</iframe>
+</div>
+      </div>
   </div></div> 
+
 </template>
 
 <script>
@@ -186,7 +204,25 @@ button:hover {
   color: green;
   font-weight: bold;
 }
+.card-ubication {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-color: #faf9f2;
+  margin-top: 110px;
+}
+.card-ubication h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #bd7d06;
+  font-family: 'Robo Slab', serif;
 
+  font-size: 1.7rem;}
+.card-ubication {
+  position: relative;
+  z-index: 1;
+}
 @media (max-height: 800px) {
   .contact-wrapper {
     padding-top: 0;
@@ -244,4 +280,5 @@ button {
 }
 
 }
+
 </style>

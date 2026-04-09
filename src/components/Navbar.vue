@@ -43,7 +43,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  
+  padding:20px 40px;
   backdrop-filter: blur(10px);
   background: rgba(255,255,255,0.15);
   position: sticky;
@@ -75,6 +76,7 @@ export default {
 }
 .nav-links {
   display: flex;
+  margin-top: 0;
   list-style: none;
   gap: 40px;
   justify-content: center;
