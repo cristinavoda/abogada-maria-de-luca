@@ -98,5 +98,9 @@ export default {
   .titulo {
     font-size: 1.2rem;
   }
+  .icon {
+    font-size: 1.8rem;
+    color: #b87333;
+  }
 }
 </style>

@@ -154,4 +154,9 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 768px) {
+  .servicios-procesal {
+    padding: 20px;
+  }
+}
 </style>

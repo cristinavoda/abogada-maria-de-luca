@@ -102,7 +102,7 @@ body {
 .contact-form {
   max-width: 900px;
   width: 100%;
-  margin: 0; 
+  margin: 6rem; 
   position: relative;
   z-index: 1;
 
@@ -113,20 +113,9 @@ body {
   border-radius: 14px;
 
   box-shadow: 0 10px 30px rgba(184,115,51,0.15);
+  margin-bottom: 40px;
 }
-.contact-form {
-  max-width: 900px;
-  align-items: center;
-  margin: 0 auto;
-  height: auto;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(5px); 
-  background: rgba(255, 255, 255, 0.2); 
-  padding: 3rem 2rem;
-  border-radius: 10px;
-  box-shadow: 4px 2px 6px rgba(202, 125, 24, 0.1);
-}
+
 
 .contact-form h2 {
   text-align: center;
@@ -200,13 +189,17 @@ button:hover {
 
 @media (max-height: 800px) {
   .contact-wrapper {
-    padding-top: 80px;
+    padding-top: 0;
     align-items: flex-start;
   }
   .contact-form {
   margin-bottom: 10px;
 }
-}
+button {
+  width: 40%;
+   margin-bottom: 2%;
+   margin-top: 10px;
+}}
 @media (max-width: 768px) {
  
   .bg-layer .logo {
@@ -236,5 +229,19 @@ button:hover {
   font-size: 1.5rem;
   font-weight: 500;
 }
+.contact-form {
+  max-width: 900px;
+  align-items: flex-start;
+  margin: -10px 0;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(8px); 
+  background: rgba(255, 255, 255, 0.2); 
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 4px 2px 6px rgba(202, 125, 24, 0.1);
+}
+
 }
 </style>
