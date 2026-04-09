@@ -236,7 +236,7 @@ h1, h2, h3 {
   padding: 120px 20px;
   z-index: 1;
   backdrop-filter: blur(15px); 
-  background: rgba(255, 255, 255, 0.5); 
+  background: rgba(243, 243, 236, 0.9); 
    justify-content: center;
   align-items: center;
   
@@ -300,7 +300,7 @@ h1, h2, h3 {
 .card {
    z-index: 1;
   backdrop-filter: blur(5px); 
-  background: rgba(255, 255, 255, 0.5); 
+  background: rgba(228, 226, 226, 0.993); 
   padding: 20px;
   border-radius: 8px;
   width: 390px;
@@ -309,7 +309,7 @@ h1, h2, h3 {
 
 .card h3 {
   margin-bottom: 10px;
-  color: #5e4a20;
+  color: #b8820d;
 }
 .sobre {
   max-width: 1000px;
@@ -331,7 +331,7 @@ h1, h2, h3 {
 .sobre-content {
   display: block; 
   position: relative;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 1.55);
    backdrop-filter: blur(17px); 
    padding: 40px 20px;
 }
