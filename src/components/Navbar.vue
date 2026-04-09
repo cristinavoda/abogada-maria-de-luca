@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="logo">
-      <img src="/images/logo1.png" alt="María de Luca" class="logo-img" />
+      <img src="/images/logo.png" alt="María de Luca" class="logo-img" />
      
     
     </div>
@@ -62,10 +62,10 @@ export default {
 }
 
 .logo-img {
-  height: 40px;
+  height: 50px;
   object-fit: contain;
   transition: 0.3s ease;
-   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+   filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.2));
 }
 
 
