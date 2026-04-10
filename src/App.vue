@@ -4,19 +4,19 @@
 
   <router-view />
 
-  <!-- BOTONES -->
+  
   <CookiesBanner />
   <WhatsAppButton />
   <PhoneButton />
 
-  <!-- MODAL -->
+  
   <div class="cookie-floating" @click="openModal">
-    ⚙️
+    
   </div>
 
   <CookieSettingsModal v-model="showCookiesModal" />
 
-  <!-- SCROLL -->
+ 
   <button 
     v-if="showButton" 
     class="scroll-top-btn"  

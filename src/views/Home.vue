@@ -3,10 +3,10 @@
     <div class="home">
     
       <div class="bg-layer"></div>  
-
+ 
       
       <div class="content-layer"> 
-        <Header />
+        
 
         <section class="hero">
           <h1 class="gradient-cobre sparkle">
@@ -153,7 +153,7 @@
 </iframe>
 </div>
       </div>
-  <Footer />
+ 
 </template>
 
 <script>
@@ -194,7 +194,15 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Robo+Slab:wght@400;700&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 h1, h2, h3 {
   font-family: 'Robo Slab', serif;
@@ -231,26 +239,38 @@ h1, h2, h3 {
 
 .bg-layer {
   position: fixed;
-  top: 0; left: 0; right: 10px; bottom: 0;
-  max-width: 100%;
+   inset: 0;
+  width: 100%;
   height: 100%;
   background: url('/images/oficina.png') center/cover no-repeat;
   z-index: 0;
 }
-@keyframes zoomInBg {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.35); }
+
+.bg-layer {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  top: 0; left: 0;
+  width: 100%;
+  min-height: 140vh;
+  background: url('/images/oficina.png') center/cover no-repeat;
+  z-index: -1;
 }
-
-
-
+.header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  margin-bottom: 4rem;
+  padding: 20px 30px;
+}
 .content-layer {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: 90%;
   height: 100%;
+   margin: 0 auto;  
   backdrop-filter: blur(5px); 
-  padding: 20px 20px;
+  padding: 20px ;
    justify-content: center;
 }
 .hero {
@@ -259,14 +279,13 @@ h1, h2, h3 {
    background: rgba(255, 255, 255, 0.9); 
    backdrop-filter: blur(10px); 
   border-radius: 12px;
-   margin: 1rem 0rem;
-   max-width: 1800px;
+   margin: 1rem 1rem;
   text-align: center;
-  padding: 20px 20px;
+  padding: 50px 20px;
   z-index: 1;
   margin-top: 60px;
   backdrop-filter: blur(15px); 
-  background: rgba(243, 243, 236, 0.9); 
+  background: rgba(243, 243, 236, 0.7); 
    justify-content: center;
   align-items: center;
   
@@ -335,7 +354,7 @@ h1, h2, h3 {
   padding: 20px;
   border-radius: 8px;
   width: 390px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 4px 2px 6px rgba(233, 192, 154, 0.856);
 }
 
 .card h3 {
@@ -344,9 +363,8 @@ h1, h2, h3 {
 }
 .sobre {
   max-width: 1000px;
-    margin: 0 auto;
-  margin: 10px auto;
-  padding: 40px 40px;
+  margin-top: 80px;
+  padding: 120px 0 0 0px;
   z-index: 1;
 }
 
@@ -472,13 +490,14 @@ h1, h2, h3 {
 
 
 .contact-form h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
   color: #a56b15;
   text-shadow: rgb(109, 99, 80) 1px 1px 1px, rgb(167, 139, 63) 2px 2px 4px;
   font-family: 'Roboto Slab', serif;
   font-size: 1.5rem;
   font-weight: 500;
+  align-items: center;
 }
 
 label {
@@ -513,8 +532,9 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-   display: inline-block;
+   
   margin-top: 30px;
+  margin-left: 70px;
   font-family: 'Roboto Slab', serif;
   font-size: 1.1rem;
   font-weight: 600;
@@ -525,10 +545,11 @@ button {
   width: 40%;
   border-radius: 18px;
   transition: 0.3s;
+  position: center;
 }
 
 button:hover {
-  background: #615002;
+  background:  #615002;
   
   backdrop-filter: blur(6px);
   background: rgba(255, 255, 255, 0.25);
@@ -567,61 +588,26 @@ button:hover {
     text-shadow: wheat 1px 1px 2px, rgb(141, 115, 44) 2px 2px 4px;
   font-size: 0.9rem;
 }
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;      
-    align-items: center;         
-    text-align: center;          
-    padding: 2rem 1rem; 
-    margin-bottom: 0-2rem; 
-    position: relative;       
-  }
 
-  footer .footer-links {
-    flex-direction: column;      
-    gap: 15px;                   
-    margin-bottom: 1.5rem;
-  }
-
-  footer .footer-socials {
-    margin-top: 1rem;
-    justify-content: center;     
-  }
-
-  footer p {
-    font-size: 0.9rem;           
-  }
-}
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  footer {
-    flex-direction: row;          
-    justify-content: space-between;
-    padding: 1rem 1rem;
-    margin-top: 40px;
-   position: relative;
-   z-index: 2;
+  .bg-layer{
+    width: 100%;
+    height: 100%;
+    inset: 0;
+  }
+  .content-layer {
+    width: 90%;
+    height: 100%;
+     margin: 0 auto;  
+    backdrop-filter: blur(5px); 
+    padding: 20px ;
+     justify-content: center;
+    align-items: center;
     
   }
-
-  footer .footer-links {
-    flex-direction: row;
-    gap: 25px;
-  }
-
-  footer p {
-    font-size: 1rem;
-  }
 }
-@media (min-width: 1025px) {
-  footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0.2rem;
-    margin-top: 40px;
-   position: relative;
-  }
-}
+
 @media (max-height: 800px) {
   .contact-wrapper {
     padding-top: 0;
@@ -634,7 +620,13 @@ button {
   width: 40%;
    margin-bottom: 2%;
    margin-top: 10px;
-}}
+}
+.bg-layer{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+  }}
 @media (max-width: 768px) {
  
   .bg-layer .logo {
@@ -660,7 +652,7 @@ button {
     padding: 0.1rem 1rem; 
   }
   .contact-form h2 {
-  text-align: center;
+
   margin-bottom: 50px;
   margin-top: 20px;
   color: #a56b15;
@@ -689,7 +681,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: -40px;
+  
   }
 
   .hero h1 {
@@ -716,8 +708,8 @@ button {
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 30px;
-  padding: 0 10px;
-  margin-left: -60px;
+  padding: 10px 10px;
+  
 }
 
 .card {

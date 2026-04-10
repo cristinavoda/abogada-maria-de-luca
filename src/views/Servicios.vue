@@ -4,9 +4,18 @@
     <section class="servicios">
       <h1>Servicios</h1>
       <div class="cards">
-        <ServicioCard titulo="Derecho Civil" descripcion="Accidentes de tráfico, reclamaciones por cláusula suelo y gastos hipotecarios, IRPH, tarjetas revolving, participaciones preferentes y cláusulas abusivas.Contratos, herencias y más"/>
-        <ServicioCard titulo="Derecho Mercantil" descripcion="Asesoramiento a empresas"/>
-        <ServicioCard titulo="Consultoría Legal" descripcion="Orientación legal personalizada"/>
+        <ServicioCard titulo="Derecho Civil" descripcion="Accidentes de tráfico, reclamaciones por cláusula suelo y gastos hipotecarios, IRPH, tarjetas revolving, participaciones preferentes y cláusulas abusivas.Contratos, herencias.Derecho de Personas: Estado civil, capacidad, derechos de imagen.
+Derecho de Familia: Matrimonio, filiación, patria potestad, divorcio.
+Derecho de Bienes/Derechos Reales: Propiedad, posesión.
+Derecho de Obligaciones y Contratos: Compraventa, arrendamientos, responsabilidad civil.
+Derecho de Sucesiones: Herencias y testamentos."/>
+        <ServicioCard titulo="Derecho Mercantil" descripcion="Asesoramiento a empresas-Derecho de Sociedades: Constitución, funcionamiento y extinción de empresas.
+Contratos Mercantiles: Compraventas, franquicias, leasing, seguros, etc..
+Títulos-valor: Cheques, pagarés, letras de cambio.
+Propiedad Industrial: Marcas, patentes y diseños.
+Derecho Concursal: Regulación de insolvencias y quiebras.
+Derecho de la Competencia: Defensa de la libre competencia y regulación de la competencia desleal."/>
+        <ServicioCard titulo="Consultoría Legal" descripcion="Orientación legal personalizada , brindar la información y el asesoramiento necesarios para la resolución de cuestiones que vengan referidas a la aplicación de leyes, normativas y reglamentos en cualquier rama del Derecho, sean de ámbito internacional, estatal, autonómico o local."/>
       </div>
     </section>
       <section class="servicios-procesal">
@@ -76,12 +85,15 @@ export default {
   }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
-   padding: 0 10px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+   padding: 10px 10px;
+   justify-content: center;
+    max-width: 1500px;
+  margin: 0 auto; 
 }
 .cards .card {
-  background: white;
+  background: white #ffd8a6;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   border-radius: 12px;
   width: 100%;

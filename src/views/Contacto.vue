@@ -2,12 +2,7 @@
     <div class="bg-layer">
     
       <div class="contact-wrapper">
-         <div class="logo">
-      <h1 ref="mainTitle" class="gradient-cobre sparkle title-shine">
-  María de Luca  
-</h1>
-      <p>Abogada · Derecho Civil y Mercantil</p>
-    </div>
+       
   <section class="contact-form">
     <h2>Contacto</h2>
     <form @submit.prevent="handleSubmit">
@@ -47,7 +42,8 @@
 </iframe>
 </div>
       </div>
-  </div></div> 
+  </div>
+</div> 
 
 </template>
 
@@ -68,7 +64,7 @@ export default {
     handleSubmit() {
       console.log("Formulario enviado:", this.form);
       this.enviado = true;
-      // Reinicia el formulario
+      
       this.form.nombre = "";
       this.form.email = "";
       this.form.mensaje = "";
@@ -82,18 +78,16 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-.bg-layer {
-  position: fixed;
+
+/*.bg-layer {
+  position: absolute;
   top: 0; left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background: url('/images/background.png') center/cover no-repeat;
-  z-index: 0;
-}
-@keyframes zoomInBg {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.35); }
-}
+  z-index: -1;
+}*/
+
 .logo h1 {
   margin-top: 7rem;
   font-size: 2.5rem;
@@ -111,10 +105,14 @@ body {
 }
 .contact-wrapper {
   display: flex;
+  
   justify-content: center;
   align-items:flex-start;
   min-height: 100vh; 
-  padding: 20px;
+  padding: 60px 20px;
+   backdrop-filter: blur(15px); 
+  background: rgba(255, 255, 255, 0.2); 
+  
 }
 
 .contact-form {
@@ -172,12 +170,10 @@ input, textarea {
 button {
   display: block;
   width: 100%;
-  padding: 12px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-   display: inline-block;
+   display: center;
   margin-top: 30px;
   font-family: 'Roboto Slab', serif;
   font-size: 1.1rem;
@@ -209,7 +205,9 @@ button:hover {
   width: 100%;
   z-index: 1;
   background-color: #faf9f2;
+  box-shadow: 10px 10px 30px rgba(184,115,51,0.15);
   margin-top: 110px;
+   z-index: 1;
 }
 .card-ubication h2 {
   text-align: center;
@@ -219,10 +217,7 @@ button:hover {
   font-family: 'Robo Slab', serif;
 
   font-size: 1.7rem;}
-.card-ubication {
-  position: relative;
-  z-index: 1;
-}
+
 @media (max-height: 800px) {
   .contact-wrapper {
     padding-top: 0;
@@ -238,15 +233,12 @@ button {
 }}
 @media (max-width: 768px) {
  
-  .bg-layer .logo {
-    display: none;
-  }
-
+  
   
   .contact-wrapper {
     flex-direction: column;
     align-items: center; 
-    padding: 2rem 0.1rem 1rem;
+    padding: 2rem 2rem 2rem;
   }
 
  
@@ -280,5 +272,7 @@ button {
 }
 
 }
+
+
 
 </style>

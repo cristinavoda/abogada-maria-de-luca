@@ -43,7 +43,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   padding:20px 40px;
   backdrop-filter: blur(10px);
   background: rgba(255,255,255,0.15);
@@ -136,17 +135,7 @@ export default {
     text-align: center;
   }
 
-  .map-container {
-    width: 100%;
-    overflow: hidden; /* evita que se salga */
-    border-radius: 12px;
-  }
-
-  .map-container iframe {
-    width: 100%;
-    height: 250px; /* más compacto en móvil */
-    border-radius: 12px;
-  }
+ 
 }
 
 </style>
