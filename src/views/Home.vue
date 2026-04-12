@@ -1,4 +1,6 @@
 <template>
+
+
   <section id="home">
     <div class="home">
     
@@ -16,6 +18,8 @@
             Asesoramiento legal en derecho civil y mercantil con un enfoque
             personalizado y profesional.
           </p>
+          <div class="img-container">
+      <img src="/images/abogada.png" alt="María de Luca" class="img" /></div>
           <p>
            Mi compromiso es ofrecerte un apoyo integral en la gestión de cualquier conflicto en el ámbito civil y de familia, así como un acompañamiento cercano y especializado en inmobiliario, procedimientos Penales, Violencia de Género, Jurisdicción de Menores, ley de la segunda oportunidad y función pública.
           </p>
@@ -306,6 +310,34 @@ h1, h2, h3 {
   color: #705509;
   font-weight: 600;
 }
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.img {
+  width: 100%;
+  max-width: 780px;
+  height: auto;
+  object-fit: cover;
+ box-shadow: 10px 10px 30px rgba(197, 133, 14, 0.75);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
 .servicios h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
@@ -443,10 +475,19 @@ h1, h2, h3 {
   padding-left: 0;
   color: #5e4a20; 
   z-index: 1;
-}
+} 
+.contact-form {
+  max-width: 900px;
+  width: 90%;
+  margin: 1rem; 
+  position: relative;}
 
 
 @media (max-width: 768px) {
+  .img {
+    max-width: 300px;
+    
+  }
   .sobre {
     width: 90%;
     
