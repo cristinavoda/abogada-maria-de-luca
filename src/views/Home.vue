@@ -242,19 +242,10 @@ h1, h2, h3 {
 
 
 .bg-layer {
-  position: fixed;
-   inset: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/images/oficina.png') center/cover no-repeat;
-  z-index: 0;
-}
-
-.bg-layer {
   position: absolute;
   background-size: cover;
   background-position: center;
-  top: 0; left: 0;
+
   width: 100%;
   min-height: 140vh;
   background: url('/background.png') center/cover no-repeat;
@@ -285,7 +276,7 @@ h1, h2, h3 {
   border-radius: 12px;
    margin: 1rem 1rem;
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px 20px;
   z-index: 1;
   margin-top: 60px;
   backdrop-filter: blur(15px); 
@@ -394,9 +385,9 @@ h1, h2, h3 {
   color: #b8820d;
 }
 .sobre {
-  max-width: 1000px;
+  width: 90%;
   margin-top: 80px;
-  padding: 120px 0 0 0px;
+  
   z-index: 1;
 }
 
@@ -413,9 +404,11 @@ h1, h2, h3 {
 .sobre-content {
   display: block; 
   position: relative;
+  width: 90%;
   background: rgba(255, 255, 255, 1.55);
    backdrop-filter: blur(17px); 
-   padding: 40px 20px;
+   padding: 20px 20px;
+   margin: 20px;
 }
 
 .sobre-content::after {
@@ -472,7 +465,7 @@ h1, h2, h3 {
 
 .sobre-content ul li {
   margin-bottom: 10px;
-  padding-left: 0;
+  padding-left: 10px;
   color: #5e4a20; 
   z-index: 1;
 } 
@@ -498,7 +491,7 @@ h1, h2, h3 {
     margin-bottom: 40px;
   }
   .sobre-float-img {
-    float: none;
+    
     display: block;
     width: 40%;
     height: 100%;
@@ -506,7 +499,7 @@ h1, h2, h3 {
   }
 
   .sobre-content {
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 40px 10px 0 10px;
 
@@ -515,8 +508,8 @@ h1, h2, h3 {
 .contact-wrapper {
   min-height: 100vh;
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
+  justify-content: center; 
+  align-items: center;     
   padding: 20px;
 }
 .contact-form {

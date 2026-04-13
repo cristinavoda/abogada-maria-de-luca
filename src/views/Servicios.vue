@@ -73,6 +73,7 @@ export default {
   components: { Header, Footer, ServicioCard },
 };
 </script>
+
 <style scoped>
 .servicios h1 {
   font-size: 1.8rem;
@@ -97,7 +98,7 @@ export default {
   background: white #ffd8a6;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   border-radius: 12px;
-  width: 100%;
+  width: 90%;
   transition: 0.3s;
   box-shadow: 3px 4px 12px rgba(0,0,0,0.05);
 }
