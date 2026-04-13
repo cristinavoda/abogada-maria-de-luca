@@ -119,9 +119,9 @@
   </section>
 
   
-  <section class="contact-form">
+  <section class="contact-wrapper">
     <h2>Contacto</h2>
-    <form @submit.prevent="handleSubmit">
+    <form @submit.prevent="handleSubmit" class="contact-form">
       <label>
         Nombre:
         <input type="text" v-model="form.nombre" required />
@@ -257,7 +257,7 @@ h1, h2, h3 {
   top: 0; left: 0;
   width: 100%;
   min-height: 140vh;
-  background: url('/images/oficina.png') center/cover no-repeat;
+  background: url('/background.png') center/cover no-repeat;
   z-index: -1;
 }
 .header {
@@ -270,9 +270,9 @@ h1, h2, h3 {
 .content-layer {
   position: relative;
   z-index: 1;
-  width: 90%;
+  width: 100%;
   height: 100%;
-   margin: 0 auto;  
+   margin: 0 0 auto ;  
   backdrop-filter: blur(5px); 
   padding: 20px ;
    justify-content: center;
@@ -512,11 +512,24 @@ h1, h2, h3 {
 
   }
 }
+.contact-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  padding: 20px;
+}
 .contact-form {
   max-width: 900px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+   align-items: center;   
+   height: auto;  
   width: 90%;
   margin: 1rem; 
-  position: relative;
+  
   z-index: 1;
 
   backdrop-filter: blur(16px);
@@ -530,7 +543,7 @@ h1, h2, h3 {
 }
 
 
-.contact-form h2 {
+.contact-wrapper h2 {
   text-align: left;
   margin-bottom: 40px;
   color: #a56b15;
@@ -687,12 +700,7 @@ button {
   }
 
  
-  .contact-form {
-    width: 100%;
-    max-width: 100%; 
-    padding: 0.1rem 1rem; 
-  }
-  .contact-form h2 {
+  .contact-wrapper h2 {
 
   margin-bottom: 50px;
   margin-top: 20px;
@@ -702,19 +710,32 @@ button {
   font-size: 1.5rem;
   font-weight: 500;
 }
-.contact-form {
-  max-width: 500px;
-  align-items: flex-start;
-  margin: 10px 0;
-  height: auto;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(8px); 
-  background: rgba(255, 255, 255, 0.2); 
-  padding: 3rem 2rem;
-  border-radius: 10px;
-  box-shadow: 4px 2px 6px rgba(202, 125, 24, 0.1);
+.contact-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  padding: 20px;
 }
+.contact-form {
+  max-width: 900px;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 2rem auto; /* ✅ ESTO LO CENTRA */
+  align-items: center; /* opcional si quieres centrar inputs */
+
+  backdrop-filter: blur(16px);
+  background: rgba(250, 249, 249, 0.25);
+
+  padding: 3rem 2rem;
+  border-radius: 14px;
+
+  box-shadow: 0 10px 30px rgba(184,115,51,0.15);
+}
+
 @media (max-width: 768px) {
   .hero {
     text-align: center;

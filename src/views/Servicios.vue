@@ -42,7 +42,8 @@ Derecho de la Competencia: Defensa de la libre competencia y regulación de la c
       <li><strong>Reclamaciones por responsabilidad civil</strong> derivada de accidentes de tráfico.</li>
       <li><strong>Reclamaciones por responsabilidad civil</strong> derivada de accidentes de trabajo.</li>
     </ul>
-
+  <div class="img-container">
+      <img src="/images/oficina.png" alt="María de Luca" class="img" /></div>
     <p>
       Actuar correctamente ante los tribunales requiere de una alta preparación procesal y amplios conocimientos técnicos sobre el derecho para la correcta defensa de sus intereses.
     </p>
@@ -167,9 +168,37 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.img {
+  width: 100%;
+  max-width: 780px;
+  height: auto;
+  padding: 1rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+ box-shadow: 10px 10px 30px rgba(197, 133, 14, 0.75);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
 @media (max-width: 768px) {
   .servicios-procesal {
     padding: 20px;
   }
+   .img {
+    max-width: 300px;
+    
+}
 }
 </style>
